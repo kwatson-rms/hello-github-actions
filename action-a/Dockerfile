@@ -101,8 +101,8 @@ ENV AWS_POLL_DELAY_SECONDS=20 AWS_MAX_ATTEMPTS=300 PACKER_LOG_PATH="packer.log" 
 # Set AzDO Agent dir
 WORKDIR /opt/azp
 
-COPY start.sh .
+#COPY start.sh .
 
 HEALTHCHECK --timeout=15s CMD packer --version && terraform --version && aws --version
 
-CMD exec "./start.sh"
+#CMD exec "./start.sh"
